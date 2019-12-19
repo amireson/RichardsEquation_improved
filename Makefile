@@ -9,6 +9,15 @@ run002/ts.pkl: run002/pars.json run002/BC.json run002/IC.json run002/grid.json l
 run003/ts.pkl: run003/pars.json run003/BC.json run003/IC.json run003/grid.json lib/*
 	bash run.sh run003
 
+run001/pars.json: 
+	python PrepareInputFiles.py
+
+run002/pars.json: 
+	python PrepareInputFiles.py
+
+run003/pars.json: 
+	python PrepareInputFiles.py
+
 clean:
 	rm Run001/*
 	rmdir Run001
